@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/shapes">
+        <file>fragmentshader.fsh</file>
+        <file>vertexshader.vsh</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>loc.xml</file>
+    </qresource>
+</RCC>
