@@ -16,10 +16,10 @@ mkdir -p build/DEBIAN
 
 # Create control file (adjust with your package metadata)
 cat << EOF > build/DEBIAN/control
-Package: your-qt-package
-Version: 1.0
+Package: Teapot
+Version: 1.1.1
 Architecture: amd64  # Adjust architecture as per your project
-Maintainer: Your Name <your.email@example.com>
+Maintainer: JinShiJD <2282575601@qq.com>
 Depends: qt5-default, other-dependencies
 Description: Short description of your Qt package
  Long description of your Qt package
