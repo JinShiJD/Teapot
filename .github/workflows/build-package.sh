@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x  # Enable detailed logging
 
 # Clean previous build
 rm -rf build/
