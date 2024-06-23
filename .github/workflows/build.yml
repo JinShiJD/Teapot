@@ -1,0 +1,22 @@
+name: Build DEB Package                # 定义工作流的名称
+
+on: [push]                             # 定义触发此工作流的事件，这里是在项目有push事件时触发
+
+jobs:                                  # 定义作业
+  build:                               # 定义名为build的作业
+    runs-on: ubuntu-latest             # 设置作业在ubuntu-latest环境中运行
+
+    steps:                             # 定义作业中的步骤
+    - name: Checkout code              # 步骤名称，检出代码
+      uses: actions/checkout@v2        # 使用actions/checkout动作来检出代码
+
+    - name: Set up QEMU                # 步骤名称，设置QEMU
+      uses: docker://ghcr.io/catthehacker/ubuntu:full  # 使用docker镜像来设置QEMU
+
+    - name: Install dependencies        # 步骤名称，安装依赖
+      run: |                           # 执行命令块
+        sudo apt-get update            # 更新apt-get包列表
+        sudo apt-get install -y devscripts build-essential  # 安装构建所需的依赖
+
+    - name: Build project and create DEB package  # 步骤名称，构建项目并生成DEB包
+      run: bash build_script.sh         # 运行构建脚本build_script.sh来构建项目并生成DEB包
