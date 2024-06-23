@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Display directory contents for debugging
       run: ls -la .github/workflows/
@@ -28,7 +28,7 @@ jobs:
       run: .github/workflows/build-package.sh
 
     - name: Upload package
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: debian-package
         path: teapot-qt-1.0.deb
