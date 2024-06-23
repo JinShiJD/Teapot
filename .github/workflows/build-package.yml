@@ -19,7 +19,7 @@ jobs:
     - name: Install Qt dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential qtbase5-dev qtbase5-dev-tools qt5-qmake qttools5-dev-tools
+        sudo apt-get install -y build-essential qtbase5-dev qtbase5-dev-tools qt5-qmake qttools5-dev-tools freeglut3-dev
 
     - name: Make build-package.sh executable
       run: chmod +x .github/workflows/build-package.sh
