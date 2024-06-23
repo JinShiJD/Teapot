@@ -7,8 +7,11 @@ set -x  # Enable detailed logging
 rm -rf build/
 mkdir -p build/
 
+# Specify the path to your .pro file
+PRO_FILE="teapot/teapot.pro"
+
 # Build your Qt project
-qmake teapot.pro -o build/
+qmake $PRO_FILE -o build/
 make -C build/
 
 # Create debian package structure
@@ -16,7 +19,7 @@ mkdir -p build/DEBIAN
 
 # Create control file (adjust with your package metadata)
 cat << EOF > build/DEBIAN/control
-Package: Teapot
+Package: teapot
 Version: 1.1.1
 Architecture: amd64  # Adjust architecture as per your project
 Maintainer: JinShiJD <2282575601@qq.com>
