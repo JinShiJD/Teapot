@@ -8,7 +8,7 @@ rm -rf build/
 mkdir -p build/
 
 # Build your Qt project
-qmake -o build/
+qmake teapot.pro -o build/
 make -C build/
 
 # Create debian package structure
