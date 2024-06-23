@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: debian-package
-        path: build/teapot-qt-1.0.deb
+        path: teapot-qt-1.0.deb
