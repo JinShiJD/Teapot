@@ -35,4 +35,7 @@ mkdir -p build/usr/local/bin
 cp build/teapot build/usr/local/bin/
 
 # Build the package
-dpkg-deb --build build/
+dpkg-deb --build build/ teapot-qt-1.0.deb
+
+# List the contents of the current directory to verify the .deb file
+ls -la
